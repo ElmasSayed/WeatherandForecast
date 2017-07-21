@@ -1,0 +1,8 @@
+ApiKey= 166a433c57516f51dfab1f7edaed8413
+
+
+Current weather url
+http://api.openweathermap.org/data/2.5/weather" + "?q=" + location + "&units=imperial" + "&APPID=" + APIkey;
+
+5day forcast:
+http://api.openweathermap.org/data/2.5/forecast?q=London&APPID=166a433c57516f51dfab1f7edaed8413

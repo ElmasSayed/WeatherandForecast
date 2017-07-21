@@ -1,0 +1,86 @@
+body {
+    background-image: url(cloud.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    /* padding-top: 10px; */
+    margin-bottom: 5px;
+    background-color: white;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.searchArea {
+    text-align: center;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    width: 500px;
+    margin-left: 400px;
+}
+
+.input {
+    border-radius: 5px;
+    border: solid;
+    border-color: white;
+    padding-left: 15px;
+    height: 30px;
+    width: 400px;
+}
+
+#search {
+    height: 30px;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-radius: 2px;
+    /* border: solid;
+    border-color: white; */
+}
+
+.box,
+.forcast {
+    margin-top: 5px;
+    /* padding-top: 5px; */
+    text-align: center;
+    /* padding-bottom: 20px; */
+}
+
+.display {
+    height: 80px;
+    width: 300px;
+    background-color: lightblue;
+    margin-bottom: 10px;
+    /* margin-top: 10px; */
+    margin-left: 175px;
+    border-radius: 30px;
+    border: solid;
+    border-color: white;
+}
+
+.forcast {
+    float: right;
+    /* margin-top: 60px; */
+}
+
+.text {
+    padding-top: 10px;
+    /* text-align: left; */
+    background-color: white;
+    border-radius: 5px;
+    border: solid;
+    border-color: white;
+    color: black;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+#cityName {
+    padding-top: 5px;
+    font-size: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: solid;
+    border-color: white;
+}
