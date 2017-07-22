@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Weather api</title>
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
@@ -18,7 +19,7 @@
         <div class="box col-md-6"> -->
     <!-- Retrieved data will be dumped here -->
     <div class="searchArea">
-        <input type="text" id="location" placeholder="Enter city" class="input">
+        <input type="text" id="location" placeholder="Show me the weather in..." class="input">
         <button type="submit" class="btn btn-primary" id="search">Search</button>
         <!-- <div class="form-group">
                     <div class="form-group">
@@ -29,10 +30,10 @@
                 </div> -->
     </div>
     <div class="box col-md-6">
-        <div class="city display ">CITY:
+        <div class="city display ">LOCATION:
             <div class="text" id="cityName"></div>
         </div>
-        <div class="temp display">TEMPERATURE:
+        <div class="temp display">TEMPERATURE in &#8457;:
             <div class="text" id="temp"></div>
         </div>
         <div class="wind display">WIND:
@@ -51,20 +52,23 @@
     <div class="forcast col-md-6">
         <!-- Retrieved data will be dumped here -->
         <div class=" display">Tomorrow:
-            <div class="text" id="temp_forcast1">Temprature:
-
-            </div>
+            <div class="text" id="day1">Temprature:</div>
+            <div class="text" id="temp_forcast1"></div>
         </div>
         <div class=" display">Day after tomorrow:
+            <div class="text" id="day2"></div>
             <div class="text" id="temp_forcast2"></div>
         </div>
         <div class="display">Day after:
+            <div class="text" id="day3"></div>
             <div class="text" id="temp_forcast3"></div>
         </div>
         <div class=" display">Another day later:
+            <div class="text" id="day4"></div>
             <div class="text" id="temp_forcast4"></div>
         </div>
         <div class=" display">5th day from today:
+            <div class="text" id="day5"></div>
             <div class="text" id="temp_forcast5"></div>
         </div>
     </div>
@@ -78,60 +82,3 @@
 </body>
 
 </html>
-
-<!--// //way 1
-        // $("#search").click( function(){
-        // });
-        // //way 2
-        // $("button").on("click","#search", function(){
-        // });-->
-<!-- 
-someurl.php?background-color=pink&margin-top=5px&padding-top=5px&padding-bottom=20px
- -->
-<!-- 
- var a = "someurl.php" +
- 		"?name=" + location +
- 		"&margin-top=" + mt +
- 		"&padding-top=" + pt +
- 		"&padding-bottom=20px"
-
-
-                 // Here we run our AJAX call to the OpenWeatherMap API
-                // 	$.ajax({
-                // 	    url: queryURL,
-                // 	    method: "GET",
-                // 	    // dataType = "jsonp",
-                // 	  })
-                // 	  // We store all of the retrieved data inside of an object called "response"
-                // 	  .done(function(response) {
-
-                // 	    // Log the queryURL
-                // 	    console.log(queryURL);
-
-                // 	    // Log the resulting object
-                // 	    // console.log(response);
-
-                // 	    // // Transfer content to HTML
-                // 	    // $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-                // 	    // $(".wind").html("Wind Speed: " + response.wind.speed);
-                // 	    // $(".humidity").html("Humidity: " + response.main.humidity);
-                // 	    // $(".temp").html("Temperature (F) " + response.main.temp);
-
-                // 	    // // Log the data in the console as well
-                // 	    // console.log("Wind Speed: " + response.wind.speed);
-                // 	    // console.log("Humidity: " + response.main.humidity);
-                // 	    // console.log("Temperature (F): " + response.main.temp);
-                // 	  }); //ajax
-
--->
-
-<!--
-            // $.ajax({
-            //     url: queryURL,
-            //     method: "GET"
-            // }).done(function(response) {
-            //     console.log(response);
-            //     // // Transfer content to html
-            //     // $(".city").html("<h1>"+ response.name + "Weather Details </h1>");
-            //     // $(".wind").html("Wind Speed: " + response.wind.speed)
-            // });-->
