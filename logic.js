@@ -44,24 +44,38 @@ $("#search").click(function() {
             $("#temp_forcast4").html(response.list[24].main.temp);
             $("#temp_forcast5").html(response.list[32].main.temp);
 
+            var idx = 0;
+
+            var todaysDate = new Date();
+            var startDate = response.list[idx].dt_txt;
+            console.log("todaysDate = " + moment(new Date(todaysDate)).format('MM/DD/YY'));
+            console.log("startDate = " + moment(new Date(startDate)).format('MM/DD/YY'));
+            if (todaysDate != startDate) {
+                idx = idx + 6;
+            }
+
             // date
-            var day1 = (response.list[0].dt_txt);
+            var day1 = (response.list[idx].dt_txt);
             var convertedDate = moment(new Date(day1));
             $("#day1").html(moment(convertedDate).format("MMM DD, YYYY"));
 
-            var day2 = (response.list[8].dt_txt);
+            idx = idx + 8;
+            var day2 = (response.list[idx].dt_txt);
             var convertedDate = moment(new Date(day2));
             $("#day2").html(moment(convertedDate).format("MMM DD, YYYY"));
 
-            var day3 = (response.list[16].dt_txt);
+            idx = idx + 8;
+            var day3 = (response.list[idx].dt_txt);
             var convertedDate = moment(new Date(day3));
             $("#day3").html(moment(convertedDate).format("MMM DD, YYYY"));
 
-            var day4 = (response.list[24].dt_txt);
+            idx = idx + 8;
+            var day4 = (response.list[idx].dt_txt);
             var convertedDate = moment(new Date(day4));
             $("#day4").html(moment(convertedDate).format("MMM DD, YYYY"));
 
-            var day5 = (response.list[32].dt_txt);
+            idx = idx + 8;
+            var day5 = (response.list[idx].dt_txt);
             var convertedDate = moment(new Date(day5));
             $("#day5").html(moment(convertedDate).format("MMM DD, YYYY"));
 
