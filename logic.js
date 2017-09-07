@@ -3,7 +3,7 @@ var APIkey = "166a433c57516f51dfab1f7edaed8413"
 $("#search").click(function() {
     event.preventDefault();
     var location = $("#location").val();
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather" + "?q=" + location + "&units=imperial" + "&APPID=" + APIkey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather" + "?q=" + location + "&units=imperial" + "&APPID=" + APIkey;
     // console.log(queryURL);
     // console.log(response);
     $.ajax({
@@ -24,7 +24,7 @@ $("#search").click(function() {
         });
 
     // Forcast
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + location + "&units=imperial" + "&APPID=" + APIkey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + location + "&units=imperial" + "&APPID=" + APIkey;
     // console.log(queryURL);
 
     $.ajax({
