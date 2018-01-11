@@ -1,6 +1,8 @@
-var APIkey = "166a433c57516f51dfab1f7edaed8413"
+$( document ).ready(function() {
 
-$("#search").click(function() {
+    var APIkey = "166a433c57516f51dfab1f7edaed8413"
+
+    $("#search").click(function() {
     event.preventDefault();
     var location = $("#location").val();
     var queryURL = "https://api.openweathermap.org/data/2.5/weather" + "?q=" + location + "&units=imperial" + "&APPID=" + APIkey;
@@ -88,4 +90,8 @@ $("#search").click(function() {
             // console.log(response.list[0].main.temp);
 
         });
-}); //button search click
+    }); //button search click
+
+// -------------------------------------------------------------------------------------------
+
+}); // $ doc ready
